@@ -1,0 +1,33 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: kube-prometheus-stack
+  namespace: monitoring
+spec:
+  interval: 30m
+  chart:
+    spec:
+      chart: kube-prometheus-stack
+      version: "66.2.2"
+      # version: "66.x"
+      # version: "66.2.*"
+
+      sourceRef:
+        kind: HelmRepository
+        name: kube-prometheus-stack
+        namespace: monitoring
+      interval: 12h
+  install:
+    crds: Create  # when installing, create the crds (custom resource definitions)
+  upgrade:
+    crds: CreateReplace # when updating, replace and create the crds
+  driftDetection:
+    mode: enabled # if the resources are changes, flux will take the helm release as the source of truth.
+    ignore:
+      # Ignore "validated" annotation which is not inserted during install
+      - paths: ["/metadata/annotations/prometheus-operator-validated"]
+        target:
+          kind: PrometheusRule  # driftDetection will ignore this path
+  values:
+    grafana:
+      adminPassword: david # change the default value in the helm relaease values
