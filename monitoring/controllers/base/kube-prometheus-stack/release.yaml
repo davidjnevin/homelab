@@ -31,3 +31,8 @@ spec:
   values:
     grafana:
       adminPassword: david # change the default value in the helm relaease values
+      ingress:
+        enabled: true
+        ingressClassName: traefik
+        hosts:
+          - grafana.nevinlab.com
