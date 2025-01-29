@@ -36,4 +36,7 @@ spec:
         ingressClassName: traefik
         hosts:
           - grs.nevinlab.com
-        tls: []
+        tls:
+          - secretName: grafana-tls-secret
+            hosts:
+              - grs.nevinlab.com
