@@ -8,3 +8,4 @@ data:
   CONFIG_PATH: "/config"
   METADATA_PATH: "/metadata"
   SOURCE: "docker"
+  PORT: 80
