@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: audiobookshelf-configmap
+  namespace: audiobookshelf
+data:
+  NODE_ENV: "production"
+  CONFIG_PATH: "/config"
+  METADATA_PATH: "/metadata"
+  SOURCE: "docker"
