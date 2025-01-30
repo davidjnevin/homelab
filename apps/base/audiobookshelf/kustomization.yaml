@@ -6,5 +6,5 @@ resources:
   # - networking.yaml
   - deployment.yaml
   - namespace.yaml
-  - service.yaml
+  # - service.yaml
   - storage.yaml
