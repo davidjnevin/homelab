@@ -9,3 +9,4 @@ data:
   METADATA_PATH: "/metadata"
   SOURCE: "docker"
   PORT: "3005"
+  USER: "1000:1000"
