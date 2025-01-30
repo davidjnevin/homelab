@@ -12,10 +12,10 @@ spec:
       labels:
         app: audiobookshelf
     spec:
-      securityContext:
-        fsGroup: 1000 # user of node group ID
-        runAsUser: 1000 # user ID
-        runAsGroup: 1000 # user group ID
+      # securityContext:
+      #   fsGroup: 1000 # user of node group ID
+      #   runAsUser: 1000 # user ID
+      #   runAsGroup: 1000 # user group ID
 
       containers:
         - name: audiobookshelf
@@ -27,8 +27,8 @@ spec:
           envFrom:
             - configMapRef:
                 name: audiobookshelf-configmap
-            - secretRef:
-                name: audiobookshelf-container-env
+            # - secretRef:
+            #     name: audiobookshelf-container-env
 
           ports:
             - containerPort: 13378
