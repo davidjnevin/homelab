@@ -32,6 +32,7 @@ spec:
 
           ports:
             - containerPort: 3005
+              protocol: TCP
 
           volumeMounts:
             - mountPath: "/audiobooks"
@@ -50,7 +51,11 @@ spec:
               name: audiobookshelf-data-pvc
               subPath: config
 
+      restartPolicy: Always
+
       volumes:
         - name: audiobookshelf-data-pvc
           persistentVolumeClaim:
             claimName: audiobookshelf-data-pvc
+
+
