@@ -3,8 +3,3 @@ kind: Kustomization
 # namespace: linkding
 resources:
   - deployment.yaml
-  - namespace.yaml
-  - service.yaml
-  - cnpg-mutating-webhook-configuration.yaml
-  - cnpg-validating-webhook-configuration.yaml
-  - customresourcedefinition.yaml
