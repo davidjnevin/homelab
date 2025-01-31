@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vaultwarden
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vaultwarden
+  template:
+    metadata:
+      labels:
+        app: vaultwarden
+    spec:
+      securityContext:
+        fsGroup: 1000 # www-data group ID
+        runAsUser: 1000 # www-data user ID
+        runAsGroup: 1000 # www-data group ID
+
+      containers:
+        - name: vaultwarden
+          image: vaultwarden/server:latest
+
+          securityContext:
+            allowPrivilegeEscalation: false
+
+          envFrom:
+            - configMapRef:
+                name: vaultwarden-configmap
+            # - secretRef:
+            #     name: vaultwarden-container-env
+
+          ports:
+            - containerPort: 3003
+
+          volumeMounts:
+            - mountPath: "/data/"
+              name: vaultwarden-data-pvc
+
+      volumes:
+        - name: vaultwarden-data-pvc
+          persistentVolumeClaim:
+            claimName: vaultwarden-data-pvc
