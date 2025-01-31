@@ -6,4 +6,4 @@ resources:
   # - cloudflare.yaml
   # - cloudflare-secret.yaml
   # - vaultwarden-env-secret.yaml
-  # - ingress.yaml
+  - ingress.yaml
