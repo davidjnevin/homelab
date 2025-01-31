@@ -13,6 +13,6 @@ spec:
               service:
                 name: vaultwarden
                 port:
-                  number: 80
+                  number: 3003
             path: /
             pathType: Prefix
