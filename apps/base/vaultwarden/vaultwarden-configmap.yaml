@@ -6,3 +6,4 @@ metadata:
 data:
   SINGUPS_ALLOWED: "false"
   DATA_FOLDER: "/data"
+  ROCKET_PORT: "3003"
