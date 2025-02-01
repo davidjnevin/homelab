@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: vaultwarden
 resources:
   - ../../base/vaultwarden/
-  # - cloudflare.yaml
-  # - cloudflare-secret.yaml
+  - cloudflare.yaml
+  - vault-cloudflare-secret.yaml
   # - vaultwarden-env-secret.yaml
   - ingress.yaml
