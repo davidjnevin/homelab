@@ -5,7 +5,8 @@ metadata:
   name: vaultwarden-configmap
   namespace: vaultwarden
 data:
-  SINGUPS_ALLOWED: "false"
+  SIGNUPS_ALLOWED: "false"
+  INVITATIONS_ALLOWED: "false"
   DATA_FOLDER: "/data"
   ROCKET_PORT: "3003"
   DOMAIN: "https://pw.nevinlab.com"
