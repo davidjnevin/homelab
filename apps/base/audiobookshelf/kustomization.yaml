@@ -3,7 +3,7 @@ kind: Kustomization
 # namespace:
 resources:
   # - secrets.yaml
-  # - networking.yaml
+  - network-policy.yaml
   - deployment.yaml
   - namespace.yaml
   - service.yaml

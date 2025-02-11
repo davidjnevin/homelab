@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: audiobookshelf
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/name: audiobookshelf
+  ingress:
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              app: audiobookshelf
+      ports:
+        - protocol: TCP
+          port: 3005
