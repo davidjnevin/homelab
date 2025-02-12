@@ -29,9 +29,9 @@ spec:
     - namespaceSelector:
         matchLabels:
           kubernetes.io/metadata.name: kube-system # Allow egress to kube-system (for API server communication)
-    ports:
-    - protocol: TCP
-      port: 443 # Allow HTTPS for API server communication
+    # ports:
+    # - protocol: TCP
+    #   port: 443 # Allow HTTPS for API server communication
   # - to: # Allow egress to your git provider
   #   - namespaceSelector:
   #       matchLabels:
@@ -40,29 +40,29 @@ spec:
   #   - protocol: TCP
   #     port: 443 # Allow HTTPS for Git API communication
 
-  - to: # Allow egress to the applications namespaces you want to update
-    - namespaceSelector:
-        matchLabels:
-          kubernetes.io/metadata.name: linkding # Use labels to target app namespaces
-    ports:
-    - protocol: TCP # Or UDP if your apps use that
-      port: 9090 # Specify the port your apps expose
-
-  - to: # Allow egress to the applications namespaces you want to update
-    - namespaceSelector:
-        matchLabels:
-          kubernetes.io/metadata.name: audiobookshelf # Use labels to target app namespaces
-    ports:
-    - protocol: TCP # Or UDP if your apps use that
-      port: 3005 # Specify the port your apps expose
-
-  - to: # Allow egress to the applications namespaces you want to update
-    - namespaceSelector:
-        matchLabels:
-          kubernetes.io/metadata.name: vaultwarden # Use labels to target app namespaces
-    ports:
-    - protocol: TCP # Or UDP if your apps use that
-      port: 3003 # Specify the port your apps expose
+  # - to: # Allow egress to the applications namespaces you want to update
+  #   - namespaceSelector:
+  #       matchLabels:
+  #         kubernetes.io/metadata.name: linkding # Use labels to target app namespaces
+  #   ports:
+  #   - protocol: TCP # Or UDP if your apps use that
+  #     port: 9090 # Specify the port your apps expose
+  #
+  # - to: # Allow egress to the applications namespaces you want to update
+  #   - namespaceSelector:
+  #       matchLabels:
+  #         kubernetes.io/metadata.name: audiobookshelf # Use labels to target app namespaces
+  #   ports:
+  #   - protocol: TCP # Or UDP if your apps use that
+  #     port: 3005 # Specify the port your apps expose
+  #
+  # - to: # Allow egress to the applications namespaces you want to update
+  #   - namespaceSelector:
+  #       matchLabels:
+  #         kubernetes.io/metadata.name: vaultwarden # Use labels to target app namespaces
+  #   ports:
+  #   - protocol: TCP # Or UDP if your apps use that
+  #     port: 3003 # Specify the port your apps expose
 
   policyTypes:
   - Ingress
