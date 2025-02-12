@@ -10,11 +10,11 @@ spec:
     - namespaceSelector:
         matchLabels:
           kubernetes.io/metadata.name: kube-system # Allow ingress from kube-system (for API server communication)
-    ports:
-    - protocol: TCP
-      port: 443 # Allow HTTPS for API server communication
-    - protocol: TCP
-      port: 8080 # Prometheus metrics port (if you expose it)
+    # ports:
+    # - protocol: TCP
+    #   port: 443 # Allow HTTPS for API server communication
+    # - protocol: TCP
+    #   port: 8080 # Prometheus metrics port (if you expose it)
   # - from: # Allow ingress from the namespace where your git provider is
   #   - namespaceSelector:
   #       matchLabels:
