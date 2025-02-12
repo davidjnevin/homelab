@@ -5,7 +5,7 @@ resources:
   # - secrets.yaml
   - deployment.yaml
   - namespace.yaml
-  - network-policy.yaml
+  # - network-policy.yaml
   - service-account.yaml
   - service.yaml
   - storage.yaml
