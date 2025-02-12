@@ -14,7 +14,7 @@ spec:
             - name: renovate
               image: renovate/renovate:latest
               args:
-                - davidjnevin/homelab # repository of githops code for cluster
+                - davidjnevin/homelab # repository of gitOps code for cluster
 
               envFrom: # using a seperate config map
                 - secretRef:
@@ -23,4 +23,3 @@ spec:
                     name: renovate-configmap
 
           restartPolicy: Never
-
