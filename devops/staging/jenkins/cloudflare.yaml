@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: jenkins-cloudflared
+  name: cloudflared
 spec:
   selector:
     matchLabels:
-      app: jenkins-cloudflared
+      app: cloudflared
   replicas: 2 # You could also consider elastic scaling for this deployment
   template:
     metadata:
@@ -50,7 +50,7 @@ spec:
       # Create a config.yaml file from the ConfigMap below.
       - name: config
         configMap:
-          name: jenkins-cloudflared
+          name: cloudflared
           items:
           - key: config.yaml
             path: config.yaml
@@ -62,7 +62,7 @@ spec:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: jenkins-cloudflared
+  name: cloudflared
 data:
   config.yaml: |
     # Name of the tunnel you want to run
