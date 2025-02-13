@@ -4,7 +4,7 @@ metadata:
   name: jenkins
 spec:
   ports:
-    - port: 9100
+    - port: 8080
   selector:
     app: jenkins
   type: ClusterIP
