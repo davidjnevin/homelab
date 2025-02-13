@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: devops-tools
 resources:
   - ../../base/jenkins
-  # - cloudflare.yaml
-  # - cloudflare-secret.yaml
-  # - ingress.yaml
-  # - configmap.yaml
+  - cloudflare.yaml
+  - jenkins-cloudflare-secret.yaml
+  - ingress.yaml
+  - configmap.yaml
