@@ -6,4 +6,3 @@ resources:
   - cloudflare.yaml
   - jenkins-cloudflare-secret.yaml
   - ingress.yaml
-  - configmap.yaml
