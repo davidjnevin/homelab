@@ -13,6 +13,6 @@ spec:
               service:
                 name: jenkins
                 port:
-                  number: 8080 # was 32000
+                  number: 32000
             path: /
             pathType: Prefix
