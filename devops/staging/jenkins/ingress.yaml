@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: jenkins
+  namespace: devop-tools
+spec:
+  ingressClassName: traefik
+  rules:
+    - host: jenkins.nevinlab.com
+      http:
+        paths:
+          - backend:
+              service:
+                name: jenkins-server
+                port:
+                  number: 32000
+            path: /
+            pathType: Prefix
