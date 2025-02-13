@@ -7,3 +7,4 @@ resources:
   - storage.yaml
   - service.yaml
   - serviceAccount.yaml
+  - jenkins-admin-secret.yaml
