@@ -4,4 +4,4 @@ metadata:
   name: jenkins-configmap
   namespace: devops-tools
 data:
-  HTTP_PORT: "9100"
+  httpPort: "9100"
