@@ -3,3 +3,4 @@ kind: Kustomization
 namespace: devops-tools
 resources:
   - ../../base/jenkins/
+  - jenkins-configmap.yaml

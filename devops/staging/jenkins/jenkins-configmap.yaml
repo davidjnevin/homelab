@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: jenkins-configmap
+  namespace: devops-tools
+data:
+  HTTP_PORT: "9100"
