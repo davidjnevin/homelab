@@ -4,3 +4,6 @@ namespace: devops-tools
 resources:
   - ../../base/jenkins/
   - jenkins-configmap.yaml
+  - cloudflare.yaml
+  - ingress.yaml
+  - jenkins-cloudflare-secret.yaml
