@@ -8,4 +8,4 @@ resources:
   - service.yaml
   - serviceAccount.yaml
   - jenkins-admin-secret.yaml
-  - jenkins-service-nodeport.yaml
+  # - jenkins-service-nodeport.yaml
