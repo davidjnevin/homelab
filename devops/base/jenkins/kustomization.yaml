@@ -5,7 +5,7 @@ resources:
   - deployment.yaml
   - namespace.yaml
   - storage.yaml
-  - service.yaml
+  # - service.yaml
   - serviceAccount.yaml
   - jenkins-admin-secret.yaml
   - clusterIP-service.yaml
