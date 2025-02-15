@@ -4,14 +4,17 @@ metadata:
   name: jenkins-cluster
 spec:
   ports:
-    - name: http-port-a
+    - name: http
       port: 8080
+      targetPort: 8080
       protocol: TCP
-    - name: http-port-b
+    - name: jenkins-agent
       port: 32000
-      protocol: TCP
+      targetPort: 32000
+      protocol: jnlp-agent
     - name: http-port-c
       port: 50000
+      targetPort: 50000
       protocol: TCP
   selector:
     app: jenkins-server
