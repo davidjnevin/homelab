@@ -29,6 +29,8 @@ spec:
           ports:
             - name: httpport
               containerPort: 8080
+            - name: jenkins-agent
+              containerPort: 32000
             - name: jnlpport
               containerPort: 50000
           livenessProbe:
