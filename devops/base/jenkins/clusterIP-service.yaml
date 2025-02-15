@@ -4,13 +4,13 @@ metadata:
   name: jenkins-cluster
 spec:
   ports:
-    - name: httpPort1
+    - name: httpPortA
       port: 8080
       protocol: TCP
-    - name: httpPort2
+    - name: httpPortB
       port: 32000
       protocol: TCP
-    - name: httpPort3
+    - name: httpPortC
       port: 50000
       protocol: TCP
   selector:
