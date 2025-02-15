@@ -4,9 +4,15 @@ metadata:
   name: jenkins-cluster
 spec:
   ports:
-    - port: 8080
-    - port: 32000
-    - port: 50000
+    - name: httpPort1
+      port: 8080
+      protocol: TCP
+    - name: httpPort2
+      port: 32000
+      protocol: TCP
+    - name: httpPort3
+      port: 50000
+      protocol: TCP
   selector:
     app: jenkins-server
   type: ClusterIP
