@@ -6,18 +6,18 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: jenkins
+      app: jenkins-server
   template:
     metadata:
       labels:
-        app: jenkins
+        app: jenkins-server
     spec:
       securityContext:
         fsGroup: 1000
         runAsUser: 1000
       serviceAccountName: jenkins-admin
       containers:
-        - name: jenkins
+        - name: jenkins-container
           image: jenkins/jenkins:lts
           resources:
             limits:
