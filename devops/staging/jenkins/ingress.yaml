@@ -10,8 +10,8 @@ spec:
       http:
         paths:
           - backend:
-              service:
-                name: jenkins-server
+              service:  # refers to the service, not the app
+                name: jenkins-cluster
                 port:
                   number: 8080
             path: /
