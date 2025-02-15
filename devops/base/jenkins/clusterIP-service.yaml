@@ -11,8 +11,8 @@ spec:
     - name: jenkins-agent
       port: 32000
       targetPort: 32000
-      protocol: jnlp-agent
-    - name: http-port-c
+      protocol: TCP
+    - name: jnlp_port
       port: 50000
       targetPort: 50000
       protocol: TCP
