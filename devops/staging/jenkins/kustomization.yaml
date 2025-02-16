@@ -7,4 +7,3 @@ resources:
   - cloudflare.yaml
   - ingress.yaml
   - jenkins-cloudflare-secret.yaml
-  - exteranl-name.yaml
