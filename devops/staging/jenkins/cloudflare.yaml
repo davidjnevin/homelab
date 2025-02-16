@@ -78,7 +78,7 @@ data:
     ingress:
     - hostname: jenkins.nevinlab.com
       service: http://jenkins-cluster:8080 # connect to the the service (clusterIP in this case)
-    - hostname: jenkins.nevinlab.com:32000
+    - hostname: jenkins.nevinlab.com
       service: http://jenkins-service:32000 # connect to the the service (jenkins-service in this case)
 
     # This rule sends traffic to the built-in hello-world HTTP server. This can help debug connectivity
