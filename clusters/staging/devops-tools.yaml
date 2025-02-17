@@ -7,6 +7,8 @@ spec:
   interval: 10m0s
   # dependsOn:
   #   - name: infra-configs
+  ref:
+    - commit: a105e03a9d09bc0776cb6f40931c165ee1a6fc67
   retryInterval: 1m
   timeout: 5m
   sourceRef:
