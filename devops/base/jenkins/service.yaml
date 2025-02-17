@@ -9,6 +9,6 @@ spec:
   type: NodePort
   ports:
     - name: jnlpport
-      port: 8080
+      port: 32000
       targetPort: 8080
       nodePort: 32000
