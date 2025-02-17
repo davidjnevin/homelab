@@ -9,3 +9,4 @@ resources:
   - serviceAccount.yaml
   - jenkins-admin-secret.yaml
   - clusterIP-service.yaml
+  - external-name.yaml
