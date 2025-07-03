@@ -15,9 +15,6 @@ spec:
               image: renovate/renovate:latest
               args:
                 - davidjnevin/homelab # repository of gitOps code for cluster
-              env: # <--- Turn on debugging
-                - name: LOG_LEVEL
-                  value: debug
               envFrom: # using a seperate config map
                 - secretRef:
                     name: renovate-container-env
