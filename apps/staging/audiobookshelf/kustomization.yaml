@@ -6,4 +6,4 @@ resources:
   - abs-cloudflare.yaml
   - abs-cloudflare-secret.yaml
   - abs-ingress.yaml
-  - abs-configmap.yaml
+  - audiobookshelf-configmap.yaml
