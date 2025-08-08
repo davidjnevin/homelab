@@ -5,6 +5,8 @@ metadata:
   namespace: mealie
 data:
   NODE_ENV: "production"
+  PUID: "1000"
+  PGID: "1000"
   # CONFIG_PATH: "/config"
   # METADATA_PATH: "/metadata"
   # SOURCE: "docker"
