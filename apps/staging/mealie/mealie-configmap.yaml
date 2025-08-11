@@ -4,7 +4,7 @@ metadata:
   name: mealie-configmap
   namespace: mealie
 data:
-  NODE_ENV: "production"
+  ALLOW_SIGNUP: "false"
   PUID: "1000"
   PGID: "1000"
   # CONFIG_PATH: "/config"
