@@ -7,4 +7,4 @@ resources:
   - mealie-cloudflare-secret.yaml
   - mealie-ingress.yaml
   - mealie-configmap.yaml
-  - mealie-container-env.yaml
+  - mealie-container-env-secret.yaml
