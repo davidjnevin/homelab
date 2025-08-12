@@ -35,7 +35,7 @@ spec:
               protocol: TCP
 
           volumeMounts:
-            - mountPath: "/mealie"
+            - mountPath: "/app/data"
               name: mealie-data-pvc
 
       restartPolicy: Always
