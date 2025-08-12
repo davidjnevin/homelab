@@ -27,8 +27,8 @@ spec:
           envFrom:
             - configMapRef:
                 name: mealie-configmap
-            # - secretRef:
-            #     name: audiobookshelf-container-env
+            - secretRef:
+                name: mealie-container-env-secret
 
           ports:
             - containerPort: 9000
